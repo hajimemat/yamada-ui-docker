@@ -18,11 +18,11 @@ function initialize {
         then
             envsubst < /usr/share/yamada-skelton/package.json.nextjs-template > package.json
         fi
-        if [ ! -d packages ]
-        then
-            mkdir packages
-            cp -r /usr/share/yamada-ui packages
-        fi
+    fi
+    if [ ! -d packages ]
+    then
+        mkdir packages
+        cp -r /usr/share/yamada-ui ./packages
     fi
     chown node:node -R .
 }
