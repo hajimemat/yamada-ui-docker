@@ -7,6 +7,7 @@ export HOST_UID=${HOST_UID:-1000}
 export HOST_GID=${HOST_GID:-1000}
 export PACKAGE_NAME=${PACKAGE_NAME:-"yamada-app"}
 
+groupmod -g ${HOST_GID} node 2>&1 > /dev/null
 usermod -u ${HOST_UID} -g ${HOST_GID} node 2>&1 > /dev/null
 
 
