@@ -21,5 +21,19 @@ docker run --name the_panties \
     -p 3000:3000 \
     -v $(pwd):/app \
     -e HOST_UID=$(id -u) \
-    -e HOST_GID=$(id -g) -d run dev
+    -e HOST_GID=$(id -g) -d yamada-ui-docker run dev
+```
+
+## プレビルド版の実行方法
+
+
+```sh
+mkdir the_panties
+cd the_panties
+docker run --name the_panties \
+    -p 3000:3000 \
+    -v $(pwd):/app \
+    -e HOST_UID=$(id -u) \
+    -e HOST_GID=$(id -g) -d \
+    reg.avap.codes/avap/public/yamada/yamada-ui-docker:20221029 run dev
 ```
